@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barbería Asere | Montevideo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- FONDO SVG GLOBAL -->
+  <div class="fondo-global">
+    <svg class="fondo-svg" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <pattern id="cubagrid" x="0" y="0" width="90" height="90" patternUnits="userSpaceOnUse">
+          <rect x="0" y="0" width="30" height="30" fill="#CC1A2A" />
+          <rect x="30" y="0" width="30" height="30" fill="#002B7F" />
+          <rect x="60" y="0" width="30" height="30" fill="#FFFFFF" />
+          <rect x="0" y="30" width="30" height="30" fill="#002B7F" />
+          <rect x="30" y="30" width="30" height="30" fill="#FFFFFF" />
+          <rect x="60" y="30" width="30" height="30" fill="#CC1A2A" />
+          <rect x="0" y="60" width="30" height="30" fill="#FFFFFF" />
+          <rect x="30" y="60" width="30" height="30" fill="#CC1A2A" />
+          <rect x="60" y="60" width="30" height="30" fill="#002B7F" />
+          <text x="15" y="21" text-anchor="middle" font-size="16" fill="#FFFFFF">★</text>
+          <text x="45" y="21" text-anchor="middle" font-size="16" fill="#FFFFFF">★</text>
+          <text x="75" y="21" text-anchor="middle" font-size="16" fill="#CC1A2A">★</text>
+          <text x="15" y="51" text-anchor="middle" font-size="16" fill="#FFFFFF">★</text>
+          <text x="45" y="51" text-anchor="middle" font-size="16" fill="#002B7F">★</text>
+          <text x="75" y="51" text-anchor="middle" font-size="16" fill="#FFFFFF">★</text>
+          <text x="15" y="81" text-anchor="middle" font-size="16" fill="#CC1A2A">★</text>
+          <text x="45" y="81" text-anchor="middle" font-size="16" fill="#FFFFFF">★</text>
+          <text x="75" y="81" text-anchor="middle" font-size="16" fill="#FFFFFF">★</text>
+        </pattern>
+        <linearGradient id="overlay" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#000820" stop-opacity="0.72" />
+          <stop offset="100%" stop-color="#3a0008" stop-opacity="0.72" />
+        </linearGradient>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#cubagrid)" />
+      <rect width="100%" height="100%" fill="url(#overlay)" />
+    </svg>
+  </div>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">ASERE</div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#servicios" class="nav-btn nb-red"><span class="nb-g"></span><i class="fa-solid fa-scissors"></i>
+          Servicios</a></li>
+      <li><a href="#horarios" class="nav-btn nb-blue"><span class="nb-g"></span><i class="fa-regular fa-clock"></i>
+          Horarios</a></li>
+      <li><a href="#galeria" class="nav-btn nb-white"><span class="nb-g"></span><i class="fa-solid fa-images"></i>
+          Galería</a></li>
+      <li><a href="#ubicacion" class="nav-btn nb-blue"><span class="nb-g"></span><i
+            class="fa-solid fa-location-dot"></i> Ubicación</a></li>
+      <li><a href="https://wa.me/598096922525" target="_blank" class="nav-btn nb-cta"><span class="nb-g"></span><i
+            class="fa-brands fa-whatsapp"></i> Reservar</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+
+    <div class="hero-img-wrap" id="heroWrap">
+      <img src="img/hero.jpg" alt="Barbería Asere" id="heroImg" class="hero-img" />
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-hint" id="heroHint">
+      <i class="fa-solid fa-camera"></i>
+      <span>Foto del barbero aquí<br><small>img/hero.jpg</small></span>
+    </div>
+
+    <div class="hero-body">
+      <div class="hero-badge">
+        <span class="pdot"></span>
+        Barbería Profesional · Montevideo
+      </div>
+      <h1 class="hero-h1">
+        <span class="h-w">EL CORTE</span>
+        <span class="h-r">QUE TE</span>
+        <span class="h-b">DEFINE</span>
+      </h1>
+      <p class="hero-sub">Estilo, tradición y precisión en cada corte.<br>En el corazón de Montevideo.</p>
+      <div class="hero-btns">
+        <a href="https://wa.me/598096922525" target="_blank" class="btn btn-red">
+          <span class="bg"></span><span class="bs"></span>
+          <i class="fa-brands fa-whatsapp"></i> Reservar turno
+        </a>
+        <a href="#servicios" class="btn btn-blue">
+          <span class="bg"></span><span class="bs"></span>
+          Ver servicios <i class="fa-solid fa-chevron-down"></i>
+        </a>
+      </div>
+      <p class="hero-tel"><i class="fa-solid fa-phone"></i> 096 922 525</p>
+    </div>
+
+    <div class="hero-flag">
+      <div class="hf hf-b"></div>
+      <div class="hf hf-w"></div>
+      <div class="hf hf-r"></div>
+      <div class="hf hf-w"></div>
+      <div class="hf hf-b"></div>
+    </div>
+    <div class="hero-chevron"><i class="fa-solid fa-chevron-down"></i></div>
+  </section>
+
+  <!-- STATS -->
+  <div class="statsbar">
+    <div class="wrap stats-inner">
+      <div class="chip"><i class="fa-solid fa-star" style="color:#C9A84C"></i> 5.0 Google</div>
+      <div class="chip"><i class="fa-solid fa-scissors" style="color:#CC1A2A"></i> +1000 cortes</div>
+      <div class="chip"><i class="fa-solid fa-calendar-check" style="color:#4a7aff"></i> Lun–Dom</div>
+      <div class="chip"><i class="fa-brands fa-instagram" style="color:#E1306C"></i> @barberiaasere</div>
+    </div>
+  </div>
+
+  <!-- SERVICIOS -->
+  <section class="sec" id="servicios">
+    <div class="wrap">
+      <p class="eyebrow"><i class="fa-solid fa-star"></i> Lo que hacemos</p>
+      <h2 class="sec-title">SERVICIOS</h2>
+      <div class="sv-grid">
+
+        <div class="sv-card sv-red reveal">
+          <div class="sv-top">
+            <span class="sv-ico sv-ico-red"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span class="sv-tag sv-tag-red">Popular</span>
+          </div>
+          <h3 class="sv-name">Degradé</h3>
+          <p class="sv-desc">Fade perfecto, líneas limpias y precisas.</p>
+          <div class="sv-price" style="color:#CC1A2A">$400</div>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-red sv-btn">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> Pedir turno
+          </a>
+        </div>
+
+        <div class="sv-card sv-blue reveal">
+          <div class="sv-top">
+            <span class="sv-ico sv-ico-blue"><i class="fa-solid fa-scissors"></i></span>
+          </div>
+          <h3 class="sv-name">Corte Común</h3>
+          <p class="sv-desc">Clásico, impecable, siempre vigente.</p>
+          <div class="sv-price" style="color:#4a7aff">$300</div>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-blue sv-btn">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> Pedir turno
+          </a>
+        </div>
+
+        <div class="sv-card sv-white reveal">
+          <div class="sv-top">
+            <span class="sv-ico sv-ico-white"><i class="fa-solid fa-face-smile"></i></span>
+          </div>
+          <h3 class="sv-name">Barba</h3>
+          <p class="sv-desc">Perfilado y afeitado profesional.</p>
+          <div class="sv-price" style="color:#fff">$100</div>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-white sv-btn">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> Pedir turno
+          </a>
+        </div>
+
+        <div class="sv-card sv-white reveal">
+          <div class="sv-top">
+            <span class="sv-ico sv-ico-white"><i class="fa-solid fa-eye"></i></span>
+          </div>
+          <h3 class="sv-name">Cejas</h3>
+          <p class="sv-desc">Definición y diseño exacto.</p>
+          <div class="sv-price" style="color:#fff">$50</div>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-white sv-btn">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> Pedir turno
+          </a>
+        </div>
+
+        <div class="sv-card sv-gold reveal sv-featured">
+          <div class="sv-top">
+            <span class="sv-ico sv-ico-gold"><i class="fa-solid fa-crown"></i></span>
+            <span class="sv-tag sv-tag-gold">Combo</span>
+          </div>
+          <h3 class="sv-name">Degradé + Peinado</h3>
+          <p class="sv-desc">El combo completo. Sales listo para todo.</p>
+          <div class="sv-price" style="color:#C9A84C">$500</div>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-gold sv-btn">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> Pedir turno
+          </a>
+        </div>
+
+        <div class="sv-card sv-red reveal">
+          <div class="sv-top">
+            <span class="sv-ico sv-ico-red"><i class="fa-solid fa-sun"></i></span>
+            <span class="sv-tag sv-tag-red">Domingo</span>
+          </div>
+          <h3 class="sv-name">Servicio Domingo</h3>
+          <p class="sv-desc">Disponible fines de semana para Ud.</p>
+          <div class="sv-price" style="color:#CC1A2A">$500</div>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-red sv-btn">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> Pedir turno
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <!-- img/trabajo1.jpg=degradé · img/trabajo2.jpg=barba · img/trabajo3.jpg=local · img/trabajo4.jpg=corte -->
+  <section class="sec" id="galeria">
+    <div class="wrap">
+      <p class="eyebrow"><i class="fa-solid fa-images"></i> Nuestros trabajos</p>
+      <h2 class="sec-title">GALERÍA</h2>
+      <div class="gal-grid">
+        <div class="gal-item gal-big reveal">
+          <img src="img/trabajo1.jpg" alt="Degradé" loading="lazy" id="g1" />
+          <div class="gal-ph"><i class="fa-solid fa-camera"></i><span>trabajo1.jpg</span></div>
+          <div class="gal-label"><i class="fa-solid fa-wand-magic-sparkles"></i> Degradé</div>
+        </div>
+        <div class="gal-item reveal">
+          <img src="img/trabajo2.jpg" alt="Barba" loading="lazy" id="g2" />
+          <div class="gal-ph"><i class="fa-solid fa-camera"></i><span>trabajo2.jpg</span></div>
+          <div class="gal-label"><i class="fa-solid fa-face-smile"></i> Barba</div>
+        </div>
+        <div class="gal-item reveal">
+          <img src="img/trabajo3.jpg" alt="Local" loading="lazy" id="g3" />
+          <div class="gal-ph"><i class="fa-solid fa-camera"></i><span>trabajo3.jpg</span></div>
+          <div class="gal-label"><i class="fa-solid fa-store"></i> El local</div>
+        </div>
+        <div class="gal-item reveal">
+          <img src="img/trabajo4.jpg" alt="Corte" loading="lazy" id="g4" />
+          <div class="gal-ph"><i class="fa-solid fa-camera"></i><span>trabajo4.jpg</span></div>
+          <div class="gal-label"><i class="fa-solid fa-scissors"></i> Corte</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EQUIPO -->
+  <!-- img/equipo.jpg = foto panorámica del equipo -->
+  <div class="equipo-band reveal">
+    <img src="img/equipo.jpg" alt="Equipo" loading="lazy" id="equipoImg" />
+    <div class="equipo-ph"><i class="fa-solid fa-users"></i><span>equipo.jpg</span></div>
+    <div class="equipo-cover">
+      <p class="eyebrow" style="color:#C9A84C"><i class="fa-solid fa-users"></i> El equipo</p>
+      <h2 class="sec-title">PROFESIONALES<br><span style="color:#CC1A2A">DE VERDAD</span></h2>
+    </div>
+  </div>
+
+  <!-- HORARIOS -->
+  <section class="sec" id="horarios">
+    <div class="wrap horarios-wrap">
+      <div class="reveal">
+        <p class="eyebrow"><i class="fa-regular fa-clock"></i> Cuándo encontrarnos</p>
+        <h2 class="sec-title">HORARIOS</h2>
+        <div class="hor-row">
+          <span><i class="fa-solid fa-calendar-week" style="color:#4a7aff"></i> Lunes a Sábado</span>
+          <span class="hor-time">10:00 – 21:00</span>
+        </div>
+        <div class="hor-row">
+          <span><i class="fa-solid fa-sun" style="color:#C9A84C"></i> Domingos</span>
+          <span class="hor-time">10:00 – 15:00</span>
+        </div>
+      </div>
+      <div class="hor-cta reveal">
+        <i class="fa-brands fa-whatsapp hor-wa"></i>
+        <p class="hor-sub">¿Quieres asegurar tu turno?</p>
+        <h3 class="hor-title">Escríbenos ahora</h3>
+        <a href="https://wa.me/598096922525" target="_blank" class="btn btn-red" style="margin-top:1.5rem">
+          <span class="bg"></span><span class="bs"></span>
+          <i class="fa-brands fa-whatsapp"></i> 096 922 525
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REDES -->
+  <section class="sec">
+    <div class="wrap">
+      <p class="eyebrow" style="justify-content:center"><i class="fa-solid fa-hashtag"></i> Síguenos</p>
+      <h2 class="sec-title" style="text-align:center">REDES SOCIALES</h2>
+
+
+
+      <div class="redes-row">
+        <a href="https://instagram.com/barberiaasere" target="_blank" class="red-card reveal">
+          <span class="nb-g"></span>
+          <i class="fa-brands fa-instagram" style="color:#E1306C"></i>
+          <span>@barberiaasere</span>
+          <i class="fa-solid fa-arrow-right" style="color:rgba(255,255,255,.3);font-size:.8rem;margin-left:auto"></i>
+        </a>
+        <a href="https://facebook.com" target="_blank" class="red-card reveal">
+          <span class="nb-g"></span>
+          <i class="fa-brands fa-facebook" style="color:#1877F2"></i>
+          <span>Barbería "Asere"</span>
+          <i class="fa-solid fa-arrow-right" style="color:rgba(255,255,255,.3);font-size:.8rem;margin-left:auto"></i>
+        </a>
+        <a href="https://tiktok.com" target="_blank" class="red-card reveal">
+          <span class="nb-g"></span>
+          <i class="fa-brands fa-tiktok"></i>
+          <span>Barbería Asere</span>
+          <i class="fa-solid fa-arrow-right" style="color:rgba(255,255,255,.3);font-size:.8rem;margin-left:auto"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN -->
+  <section class="sec" id="ubicacion">
+    <div class="wrap ubicacion-wrap">
+      <div class="reveal">
+        <p class="eyebrow"><i class="fa-solid fa-location-dot"></i> Dónde estamos</p>
+        <h2 class="sec-title">UBICACIÓN</h2>
+        <p class="ubic-line"><i class="fa-solid fa-map-pin" style="color:#CC1A2A"></i> Magallanes 1501 esq.
+          Mercedes<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Montevideo, Uruguay</p>
+        <p class="ubic-line"><i class="fa-solid fa-phone" style="color:#CC1A2A"></i> 096 922 525</p>
+        <div class="ubic-btns">
+          <a href="https://www.google.com/maps/place/Magallanes+1501,+11200+Montevideo,+Departamento+de+Montevideo/@-34.9015698,-56.1832325,17z"
+            target="_blank" class="btn btn-red">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-solid fa-diamond-turn-right"></i> Cómo llegar
+          </a>
+          <a href="https://wa.me/598096922525" target="_blank" class="btn btn-blue">
+            <span class="bg"></span><span class="bs"></span>
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="mapa reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.6!2d-56.1806522!3d-34.9015698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f816a7714f27f%3A0x3723abcb0257d847!2sMagallanes+1501%2C+11200+Montevideo!5e0!3m2!1ses!2suy!4v1"
+          width="100%" height="100%" style="border:0" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="flag-bar">
+      <div class="fb fb-b"></div>
+      <div class="fb fb-w"></div>
+      <div class="fb fb-r"></div>
+      <div class="fb fb-w"></div>
+      <div class="fb fb-b"></div>
+    </div>
+    <div class="wrap footer-inner">
+      <div class="footer-card">
+        <div class="footer-logo">BARBERÍA ASERE</div>
+        <p class="footer-addr"><i class="fa-solid fa-location-dot"></i> Magallanes 1501 esq. Mercedes · Montevideo</p>
+        <div class="footer-social">
+          <a href="https://wa.me/598096922525" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="https://instagram.com/barberiaasere" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+          <a href="https://tiktok.com" target="_blank"><i class="fa-brands fa-tiktok"></i></a>
+        </div>
+        <p class="footer-copy">© 2025 Barbería Asere · Todos los derechos reservados</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
