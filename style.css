@@ -181,7 +181,7 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
 ══════════════════════════════ */
 .hero {
   position:relative; min-height:100svh;
-  display:flex; align-items:center; overflow:hidden; z-index:2;
+  display:flex; align-items:center; flex-wrap:wrap; z-index:2;
 }
 
 
@@ -553,7 +553,13 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
   .ubicacion-wrap { grid-template-columns:1fr; gap:2.5rem; }
   .gal-grid { grid-template-columns:1fr 1fr; }
   .posts-grid { grid-template-columns:repeat(2,1fr); }
-  .hero-foto-wrap { display:none; }
+.hero-foto-wrap {
+    position:relative; right:auto; top:auto; bottom:auto;
+    transform:none; width:calc(100% - 3rem);
+    aspect-ratio:3/4; border-radius:16px;
+    margin:0 auto 2rem;
+    border-left:none;
+  }
 }
 @media(max-width:640px){
   .navbar { padding:1rem 1.5rem; }
