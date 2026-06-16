@@ -183,33 +183,11 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
   position:relative; min-height:100svh;
   display:flex; align-items:center; overflow:hidden; z-index:2;
 }
-.hero-img-wrap { position:absolute; inset:0; z-index:0; }
-.hero-img { width:100%; height:100%; object-fit:cover; object-position:center top; opacity:.35; display:block; }
-.hero-overlay {
-  position:absolute; inset:0;
-  background:linear-gradient(105deg,rgba(1,1,21,.88) 30%,rgba(1,1,21,.35) 100%),
-             linear-gradient(0deg,rgba(1,1,21,.7) 0%,transparent 40%);
-}
 
-/* Sin foto -->  placeholder -->  */
-.hero-img-wrap.no-img { background:transparent; }
-.hero-img-wrap.no-img .hero-img { display:none; }
-
-.hero-hint {
-  position:absolute; right:clamp(2rem,8vw,7rem); top:50%; transform:translateY(-50%);
-  width:clamp(180px,26vw,300px); aspect-ratio:1/1;
-  border:2px dashed rgba(255,255,255,.3); border-radius:12px;
-  display:none; flex-direction:column; align-items:center; justify-content:center;
-  gap:.8rem; background:rgba(255,255,255,.05); backdrop-filter:blur(4px); z-index:3;
-  text-align:center;
-}
-.hero-hint i { font-size:2.5rem; color:rgba(255,255,255,.4); }
-.hero-hint span { font-size:.68rem; color:rgba(255,255,255,.4); letter-spacing:1px; text-transform:uppercase; padding:0 1rem; }
-.hero-hint small { display:block; color:rgba(255,255,255,.25); font-size:.6rem; margin-top:.3rem; }
 
 .hero-body {
-  position:relative; z-index:3; max-width:680px;
-  padding:8rem clamp(1.5rem,6vw,6rem) 5rem;
+  position:relative; z-index:3; max-width:560px;
+  padding:8rem clamp(1.5rem,4vw,4rem) 5rem;
 }
 .hero-badge {
   display:inline-flex; align-items:center; gap:.7rem;
@@ -239,9 +217,9 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
 .h-r { color:var(--r); text-shadow:0 0 40px rgba(204,26,42,.6); }
 .h-b { color:#4a7aff; text-shadow:0 0 40px rgba(0,43,127,.7); }
 
-.hero-sub { font-size:1rem; color:rgba(255,255,255,.6); line-height:1.75; margin-bottom:2.5rem; font-weight:300; max-width:440px; }
-.hero-btns { display:flex; gap:1rem; flex-wrap:wrap; }
-.hero-tel { display:inline-flex; align-items:center; gap:.6rem; margin-top:1.8rem; font-size:.85rem; color:rgba(255,255,255,.4); letter-spacing:1px; }
+.hero-sub { font-size:1rem; color:rgba(255,255,255,.85); line-height:1.75; margin-bottom:2.5rem; font-weight:400; max-width:440px; }
+.hero-btns { display:flex; flex-direction:row; gap:1rem; flex-wrap:nowrap; }
+.hero-tel { display:inline-flex; align-items:center; gap:.6rem; margin-top:1.8rem; font-size:.85rem; color:rgba(255,255,255,.85); letter-spacing:1px; }
 .hero-tel i { color:var(--r); }
 
 .hero-flag { position:absolute; bottom:0; left:0; right:0; display:flex; height:7px; z-index:5; }
@@ -252,6 +230,16 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
 
 .hero-chevron { position:absolute; bottom:2rem; left:50%; transform:translateX(-50%); color:rgba(255,255,255,.3); font-size:1.1rem; z-index:4; animation:chev 2s infinite; }
 @keyframes chev{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
+
+.hero-foto-wrap {
+  position:absolute; right:0; top:80px; bottom:40px;
+  width:45%; overflow:hidden; z-index:3;
+  border-left:2px solid rgba(255,255,255,.1);
+  border-radius:0 0 0 20px;
+}
+.hero-foto {
+  width:100%; height:100%; object-fit:cover; object-position:center top; display:block;
+}
 
 /* ══════════════════════════════
    STATS BAR
@@ -382,25 +370,55 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
 /* ══════════════════════════════
    EQUIPO BANDA
 ══════════════════════════════ */
-.equipo-band {
-  position:relative; z-index:2; width:100%;
-  height:clamp(260px,42vw,480px); overflow:hidden;
+.equipo-sec { border-top:1px solid rgba(255,255,255,.06); }
+.equipo-wrap {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:4rem; align-items:center;
 }
-.equipo-band img { width:100%; height:100%; object-fit:cover; opacity:.35; display:block; position:relative; z-index:1; }
-.equipo-ph {
-  position:absolute; inset:0; z-index:0;
+.equipo-texto { display:flex; flex-direction:column; gap:1.5rem; }
+.equipo-desc { font-size:.95rem; color:rgba(255,255,255,.85); line-height:1.8; font-weight:400; }
+.equipo-stats { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:.5rem; }
+.eq-stat {
+  display:flex; flex-direction:column; gap:.3rem;
+  padding:1.2rem 1.5rem; border-radius:12px;
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  backdrop-filter:blur(16px);
+  position:relative; overflow:hidden;
+  box-shadow:0 4px 16px rgba(0,0,0,.2), inset 0 1px 0 rgba(255,255,255,.12);
+}
+.eq-stat::before {
+  content:''; position:absolute; top:0; left:0; right:0; height:50%;
+  background:linear-gradient(180deg,rgba(255,255,255,.08),transparent);
+  pointer-events:none;
+}
+.eq-num {
+  font-family:'Bebas Neue',sans-serif; font-size:2.2rem;
+  color:var(--r); letter-spacing:1px; line-height:1;
+}
+.eq-label { font-size:.72rem; color:rgba(255,255,255,.45); letter-spacing:.5px; }
+
+.equipo-foto {
+  position:relative; border-radius:20px; overflow:hidden;
+  aspect-ratio:1/1;
+  border:2px solid rgba(255,255,255,.12);
+  box-shadow:0 20px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(204,26,42,.2);
+}
+.equipo-foto img {
+  width:100%; height:100%; object-fit:cover;
+  object-position:center top; display:block;
+}
+.equipo-foto-ph {
+  position:absolute; inset:0;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   gap:.6rem; color:rgba(255,255,255,.2);
 }
-.equipo-ph i { font-size:3rem; }
-.equipo-ph span { font-size:.65rem; letter-spacing:1px; text-transform:uppercase; }
-.equipo-cover {
-  position:absolute; inset:0; z-index:2;
-  background:linear-gradient(105deg,rgba(1,1,21,.85) 30%,rgba(1,1,21,.25) 100%);
-  display:flex; flex-direction:column; justify-content:center;
-  padding:3rem clamp(1.5rem,6vw,6rem);
+.equipo-foto-ph i { font-size:3rem; }
+.equipo-foto-ph span { font-size:.65rem; letter-spacing:1px; text-transform:uppercase; }
+
+@media(max-width:960px){
+  .equipo-wrap { grid-template-columns:1fr; gap:2.5rem; }
 }
-.equipo-cover .sec-title { margin-bottom:.3rem; }
 
 /* ══════════════════════════════
    HORARIOS
@@ -535,7 +553,7 @@ body { font-family:'Inter',sans-serif; color:var(--w); overflow-x:hidden; backgr
   .ubicacion-wrap { grid-template-columns:1fr; gap:2.5rem; }
   .gal-grid { grid-template-columns:1fr 1fr; }
   .posts-grid { grid-template-columns:repeat(2,1fr); }
-  .hero-hint { display:none; }
+  .hero-foto-wrap { display:none; }
 }
 @media(max-width:640px){
   .navbar { padding:1rem 1.5rem; }
